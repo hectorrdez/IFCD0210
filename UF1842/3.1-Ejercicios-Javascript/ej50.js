@@ -11,4 +11,10 @@ for(var i = 0; i < 10; i++){
     num[i]=parseInt(prompt("dime un numero"));
     console.log(num[i]);
 }
-
+var busqueda = parseInt(prompt("dime la busqueda"));
+var pos = 0;
+for(var i = 0; i < num.length; i++){
+    pos++;
+    if(busqueda == num[i])break;
+}
+document.write("Busqueda: "+busqueda+" Posicion: "+pos);
