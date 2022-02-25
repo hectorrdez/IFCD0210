@@ -16,11 +16,15 @@ for(var y = 0; y < 8; y++){
         }else{
             document.write(" class=negro>");
         }
-        if(y < 2) document.write("<h6 class=negro>");
-        if(y >= 6) document.write("<h6 class=blanco>")
+        if(y < 2) document.write("<h2 class=negro>");
+        if(y >= 6) document.write("<h2 class=blanco>")
         if(y == 1 || y == 6) document.write("P");
-            if((x == 0 && y == 0) || (x == 7 && y == 0) || (x == 0 && y == 7) || (x == 7 && y == 7)) document.write("T")
-        document.write("</h6>")
+        if((x == 0 && y == 0) || (x == 7 && y == 0) || (x == 0 && y == 7) || (x == 7 && y == 7)) document.write("T");
+        if((x == 1 || x == 6) && (y == 0 || y == 7)) document.write("C");
+        if((x == 2 || x == 5) && (y == 0 || y == 7)) document.write("A");
+        if(x == 3 && (y == 0 || y == 7)) document.write("Q");
+        if(y >= 2 && y <= 5) document.write("#");
+        document.write("</h2>")
 
         document.write("</td>");
     }

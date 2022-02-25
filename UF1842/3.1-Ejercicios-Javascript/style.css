@@ -1,32 +1,26 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-size: 20px;
-    font-weight: bold;
+}
+td{
+    height: 100px;
+    width: 100px;
+    text-align: center;
 }
 td.negro{
     background-color: black;
-    color: white;
 }
 td.blanco{
     background-color: white;
-    border: 1px solid black;
-}
-td{
-    height: 15px;
-    width: 100px;
 }
 table{
     text-align: center;
 }
-h6 {
-    font-size: 20px;
-}
-h6.negro{
+h2.negro{
     color:black;
-    border: 1px solid white;
+    text-shadow: 2px 2px white;
 }
-h6.blanco{
+h2.blanco{
     color:white;
-    border: 1px solid black;
+    text-shadow: 10px 10px black;
 }
