@@ -15,12 +15,13 @@
         for(var i=0; i< parrafos.length; i++){
             var parrafo= parrafos[i];
             var color = parrafo.style.color;
-            parrafo.style.color = "red";
+            if(i%2 == 0)parrafo.style.color = "yellow";
+            if(i%2 != 0)parrafo.style.color = "blue";
             
             
             var texto = parrafo.innerHTML;
             
-            parrafo.innerHTML = "XXXXXXXXXXXX";
+            parrafo.innerHTML = "X<a href=http://www.google.es>X</a>XXXXXXXXXX";
         }
     </script>
 

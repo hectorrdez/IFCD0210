@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="galeria"></div>
+
+    <script>
+
+        var listaImagenes = new Array(10);
+
+        listaImagenes[0] = "http://cdn.pixabay.com/photo/2016/07/24/09/14/making-1538109_960_720.jpg";
+
+        listaImagenes[1] = "http://cdn.pixabay.com/photo/2016/06/13/13/39/pizza-1454239_960_720.png";
+
+        listaImagenes[2] = "http://cdn.pixabay.com/photo/2017/02/14/07/44/cake-2065046_960_720.jpg";
+
+        listaImagenes[3] = "https://cdn.pixabay.com/photo/2019/03/31/07/48/food-4092617_960_720.jpg";
+
+        listaImagenes[4] = "https://cdn.pixabay.com/photo/2012/04/12/20/43/pizza-30579_960_720.png";
+
+        let galeria = document.querySelector(".galeria");
+        let content = "";
+        for(let i = 0; i < 5; i++){
+            galeria.innerHTML += `<div><img src="${listaImagenes[i]}" height="100px"></div>`;
+        }
+
+//escribe el codigo necesario para mostrar una imagen diferente dependiendo del segundo en el que se
+
+//cargue la página
+
+//obtener el segundo en el que me encuentro
+
+// realizar el módulo 5 (porque tengo solo 5 imágenes)
+
+// obtener el valor del array del resultado anterior
+
+//sustituir el atributo src de "imagen" por el valor obtenido
+
+    </script>
+
+</body>
+
+</html>
