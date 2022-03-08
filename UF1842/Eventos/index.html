@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="textosaludo">
+
+    </div>
+    <button id="saludo">Saludo</button>
+    <button id="despedida">Despedida</button>
+    <button onclick="bienvenida('victor')">Victor</button>
+    <button onclick="bienvenida('alejandro')">alejandro</button>
+    <br><img id="img" src="gato.jpg" height="200px" onclick="cambiarIMG()">
+    <br><img id="img2" src="gato.jpg" height="200px" onclick="cambiarIMG2(this)">
+    <script>
+        document.getElementById("saludo").onclick = saludo;
+        document.getElementById("despedida").onclick = despedida;
+        function saludo(){
+            document.getElementById("textosaludo").innerHTML = "buenos dias";
+        }
+        function despedida(){
+            document.getElementById("textosaludo").innerHTML = "hasta luego";
+        }
+        function bienvenida(persona){
+            document.getElementById("textosaludo").innerHTML = "hola "+persona;
+        }
+        function cambiarIMG(){
+            let foto = document.getElementById("img");
+            if(foto.src.indexOf('perro.jpg') >0){ 
+                foto.src = "gato.jpg";
+            }else{
+                foto.src = "perro.jpg";
+            }
+        }
+        function cambiarIMG2(foto){
+            if(foto.src.indexOf('perro.jpg') >0){ 
+                foto.src = "gato.jpg";
+            }else{
+                foto.src = "perro.jpg";
+            }
+        }
+        
+    </script>
+</body>
+</html>
