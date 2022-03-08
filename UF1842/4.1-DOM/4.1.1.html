@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    
+    <body>
+        <p>parrafo 1</p>
+        <p>parrafo 2</p>
+        <p>parrafo 3</p>
+        <p>parrafo 4</p>
+        
+    </body>
+    
+    <script>
+        var parrafos = document.getElementsByTagName("p");
+        
+        for(var i=0; i< parrafos.length; i++){
+            var parrafo= parrafos[i];
+            var color = parrafo.style.color;
+            if(i%2 == 0)parrafo.style.color = "yellow";
+            if(i%2 != 0)parrafo.style.color = "blue";
+            
+            
+            var texto = parrafo.innerHTML;
+            
+            parrafo.innerHTML = "X<a href=http://www.google.es>X</a>XXXXXXXXXX";
+        }
+    </script>
+
+</html>
+

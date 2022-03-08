@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div id="elemento1">
+        <div id="elemento2">
+            <a href="http://www.fempa.es">fempa</a>
+        </div>
+
+        <div id="elemento3">
+            <a href="http://www.fempa.es">fempa</a>
+            <a href="http://www.fempa.es">fempa</a>
+        </div>
+
+
+    </div>
+
+    <div id="elemento11">
+        <div id="elemento21">
+            <a href="http://www.fempa.es">fempa</a>
+        </div>
+
+        <div id="elemento31">
+            hola a todos
+
+        </div>
+    </div>
+
+
+    <script>
+        //Crea en el elemento 31 3 enlaces
+        // borra el elemento 31
+
+        var elemento = document.getElementById("elemento31");
+        elemento.innerHTML = elemento.innerHTML +
+            "<a href='pagina1.html'>enlace1</a>" +
+            "<a href='pagina2.html'>enlace2</a>" +
+            "<a href='pagina3.html'>enlace3</a>";
+        elemento.parentNode.removeChild(elemento);
+
+
+
+    </script>
+</body>
+
+</html>
