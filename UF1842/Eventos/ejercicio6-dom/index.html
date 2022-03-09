@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 DOM</title>
+    <style>
+        .zoom{
+            width: 300px;
+            height: 300px;
+        }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;         
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="1.png" height="100px" width="100px" alt="" id="img1" onmouseover="ampliar('img1')" onmouseleave="normal('img1')">
+        <img src="2.png" height="100px" width="100px" alt="" id="img2" onmouseover="ampliar('img2')" onmouseleave="normal('img2')">
+        <img src="3.png" height="100px" width="100px" alt="" id="img3" onmouseover="ampliar('img3')" onmouseleave="normal('img3')">
+        <img src="4.png" height="100px" width="100px" alt="" id="img4" onmouseover="ampliar('img4')" onmouseleave="normal('img4')">
+        <img src="5.png" height="100px" width="100px" alt="" id="img5" onmouseover="ampliar('img5')" onmouseleave="normal('img5')">
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

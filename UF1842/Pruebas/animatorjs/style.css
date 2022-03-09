@@ -1,0 +1,22 @@
+#ball {
+    position: absolute;
+    left: 20px;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    background: #1E90FF;
+    background: radial-gradient(circle at 10px 10px, #5ed0ff, #1E90FF);
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(210,210,210,.8);
+    }
+    
+    #platform {
+    position: absolute;
+    left: 10px;
+    top: 180px;
+    background: #999;
+    height: 2px;
+    border-radius: 2px;
+    width: 0;
+    box-shadow: 1px 1px 1px rgba(210,210,210,.8);
+    }
