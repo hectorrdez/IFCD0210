@@ -76,6 +76,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -2;
 }
 .wrapper div img{
     height: 40px;
@@ -84,193 +85,293 @@ section{
 
 #grid1{
     grid-column:1; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid2{
     grid-column:2; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid3{
     grid-column:3; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid4{
     grid-column:4; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid5{
     grid-column:5; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid6{
     grid-column:6; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid7{
     grid-column:7; grid-row:8;
+    border-top: 3px solid black;
 }
 #grid8{
     grid-column:8; grid-row:8;
 }
 #grid9{
     grid-column:8; grid-row:7;
+    border-left: 3px solid black;
 }
 #grid10{
     grid-column:8; grid-row:6;
+    border-left: 3px solid black;
 }
 #grid11{
     grid-column:8; grid-row:5;
+    border-left: 3px solid black;
 }
 #grid12{
     grid-column:8; grid-row:4;
+    border-left: 3px solid black;
 }
 #grid13{
     grid-column:8; grid-row:3;
+    border-left: 3px solid black;
 }
 #grid14{
     grid-column:8; grid-row:2;
+    border-left: 3px solid black;
 }
 #grid15{
     grid-column:8; grid-row:1;
 }
 #grid16{
     grid-column:7; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid17{
     grid-column:6; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid18{
     grid-column:5; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid19{
     grid-column:4; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid20{
     grid-column:3; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid21{
     grid-column:2; grid-row:1;
+    border-bottom: 3px solid black;
 }
 #grid22{
     grid-column:1; grid-row:1;
 }
 #grid23{
     grid-column:1; grid-row:2;
+    border-right: 3px solid black;
 }
 #grid24{
     grid-column:1; grid-row:3;
+    border-right: 3px solid black;
 }
 #grid25{
     grid-column:1; grid-row:4;
+    border-right: 3px solid black;
 }
 #grid26{
     grid-column:1; grid-row:5;
+    border-right: 3px solid black;
 }
 #grid27{
     grid-column:1; grid-row:6;
+    border-right: 3px solid black;
 }
 #grid28{
     grid-column:1; grid-row:7;
+    border-bottom: 3px solid black;
 }
 #grid29{
     grid-column:2; grid-row:7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid30{
     grid-column:3; grid-row:7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid31{
     grid-column:4; grid-row:7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid32{
     grid-column:5; grid-row:7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid33{
     grid-column:6; grid-row:7;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid34{
     grid-column:7; grid-row:7;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid35{
     grid-column:7; grid-row:6;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid36{
     grid-column:7; grid-row:5;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid37{
     grid-column:7; grid-row:4;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid38{
     grid-column:7; grid-row:3;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid39{
     grid-column:7; grid-row:2;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid40{
     grid-column:6; grid-row:2;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid41{
     grid-column:5; grid-row:2;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid42{
     grid-column:4; grid-row:2;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid43{
     grid-column:3; grid-row:2;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid44{
     grid-column:2; grid-row:2;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid45{
     grid-column:2; grid-row:3;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid46{
     grid-column:2; grid-row:4;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid47{
     grid-column:2; grid-row:5;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid48{
     grid-column:2; grid-row:6;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid49{
     grid-column:3; grid-row:6;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid50{
     grid-column:4; grid-row:6;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid51{
     grid-column:5; grid-row:6;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid52{
     grid-column:6; grid-row:6;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid53{
     grid-column:6; grid-row:5;
+    border-left: 3px solid black;
+    border-right: 3px solid black; 
 }
 #grid54{
     grid-column:6; grid-row:4;
+    border-left: 3px solid black;
+    border-right: 3px solid black; 
 }
 #grid55{
     grid-column:6; grid-row:3;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid56{
     grid-column:5; grid-row:3;
+    border-bottom: 3px solid black; 
+    border-top: 3px solid black;
 }
 #grid57{
     grid-column:4; grid-row:3;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
 }
 #grid58{
     grid-column:3; grid-row:3;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid59{
     grid-column:3; grid-row:4;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 #grid60{
     grid-column:3; grid-row:5;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid61{
     grid-column:4; grid-row:5;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid62{
     grid-column:5; grid-row:5;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 #grid63{
     grid-column:5; grid-row:4;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
 }
 #grid64{
     grid-column:4; grid-row:4;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+    /* background-image: url("fin.png"); */
+    background-color: green;
 }
