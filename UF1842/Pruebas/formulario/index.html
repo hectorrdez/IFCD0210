@@ -1,0 +1,101 @@
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Validación con javascript</title>
+
+</head>
+
+<body>
+
+    <h1>Validación con javascript</h1>
+
+    <div>
+
+        <script>
+
+            function validar() {
+                return document.getElementById("dni").value.length ? true : false;
+            }
+
+        </script>
+
+        <form onsubmit="return validar()">
+
+            <fieldset>
+
+                <legend>Introduce los datos y pulsa Comprobar</legend>
+
+
+
+                <label for="dni">DNI:</label>
+
+                <input id="dni" type="text" name="dni" />
+
+                <div id="errordni"></div>
+
+
+
+                <br /><br />
+
+
+
+                <label for="nombre">Nombre:</label>
+
+                <input id="nombre" type="text" name="nombre" size="40" maxlength="150" />
+
+                <div id="errornombre"></div>
+
+                <br /><br />
+
+
+
+                <label for="edad">Fecha de Nacimiento:</label>
+
+                <input id="edad" type="date" name="edad" />
+
+                <div id="erroredad"></div>
+
+                <br /><br />
+
+
+
+                <label for="email">Email:</label>
+
+                <input id="email" type="text" name="email" size="40" maxlength="132" />
+
+
+
+                <br /><br />
+
+
+
+                <label for="sitioweb">Página WEB:</label>
+
+                <input id="sitioweb" type="url" name="sitioweb" />
+
+
+
+                <br /><br />
+
+
+
+                <label for="passwd">Contraseña:</label>
+
+                <input id="passwd" type="password" name="passwd" />
+
+            </fieldset>
+
+
+
+            <input type="submit" value="Comprobar" />
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

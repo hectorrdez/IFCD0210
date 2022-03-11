@@ -10,7 +10,7 @@ let reset = document.getElementById("reset");
 reset.onclick = resetMatch;
 
 let imagen = "<img src='ficha.png'>"
-let salida = document.getElementById("grid1");
+let salida = document.querySelector(".grid1");
 salida.innerHTML = imagen;
 
 function tirarDados(){
@@ -21,9 +21,9 @@ function tirarDados(){
 }
 function movimientos(newpos){
     for(let i = 1; i <= max; i++){
-        document.getElementById(`grid${i}`).innerText=i;
+        document.querySelector(`.grid${i}`).innerText=i;
     }
-    document.getElementById(`grid${newpos}`).innerHTML = imagen;
+    document.querySelector(`.grid${newpos}`).innerHTML = imagen;
     if(newpos == max){
         alert("El juego se ha terminado");
     }
@@ -42,7 +42,7 @@ function posiciones(){
 function resetMatch(){
     posicion = 1;
     for(let i = 1; i <= max; i++){
-        document.getElementById(`grid${i}`).innerText=i;
+        document.querySelector(`.grid${i}`).innerText=i;
     }
-    document.getElementById(`grid${posicion}`).innerHTML = imagen;
+    document.querySelector(`.grid${posicion}`).innerHTML = imagen;
 }

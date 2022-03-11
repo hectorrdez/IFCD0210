@@ -1,0 +1,181 @@
+body {
+background-color:#fff;
+color:#333333;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+height:400px;
+width:800px;
+}
+
+html > body {
+	border-bottom:1px solid black;
+}
+
+h1, h2, h3, h4 {
+	margin:0;
+	padding:0;
+	text-align: right;
+}
+
+div#intro {
+	background-image:url("../imagenes/header.jpg");
+	background-repeat:no-repeat;
+	background-position:left top;
+	height:550px;
+	background-color: #fff;
+	color: #A1BE47;
+}
+
+div#intro p {
+width:350px;
+}
+
+h1 span, h3 span, #extraDiv1, #extraDiv2, #extraDiv3, #extraDiv4, #extraDiv5, #extraDiv6 {
+}
+
+#explanation h3 span, #preamble h3 span, #participation h3 span, #benefits h3 span, #requirements h3 span {
+display:block;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:1.5em;
+color:#557216;
+}
+
+h2 {
+color:#999999;
+padding-top:10px;
+font-size:1.2em;
+font-weight:normal;
+padding-left:3em;
+}
+
+div#footer a, p a {
+color:#c9380b;
+text-decoration:none;
+font-weight:bold;
+}
+
+p a:hover, div#footer a:hover {
+text-decoration:underline;
+}
+
+div#linkList2, div#lresources {
+	background-repeat:repeat-y;
+	width:252px;
+	height:163px;
+	position:absolute;
+	top:-213px;
+	left:-3px;
+}
+
+h3.select {
+background-repeat:no-repeat;
+width:255px;
+}
+
+div#lselect ul, div#larchives ul, div#lresources ul {
+color:#000;
+font-size:0.9em;
+margin:0px;
+padding:0px;
+width:90%;
+padding-left:35px;
+}
+
+div#lresources ul {
+padding-left:50px;
+}
+
+div#lselect li, div#larchives li, div#lresources li {
+list-style-type: none;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 15px;
+width: 90%;
+font-size:12px;
+}
+
+div#lselect a, div#larchives a, div#lresources a {
+color:#333333;
+text-decoration:none;
+font-weight:bold;
+}
+
+div#lselect a.c {
+color:#fff;
+font-weight:normal;
+}
+
+div#lselect a:hover, div#larchives a:hover, div#lresources a:hover {
+}
+
+h3.archives {
+margin-top:70px;
+background-repeat:no-repeat;
+width:255px;
+}
+
+div#preamble, div#explanation, div#participation, div#benefits, div#requirements, div#ejercicios {
+	position:absolute;
+	background-repeat:no-repeat;
+	font-size:75%;
+	height:227px;
+	left: 3px;
+	top: 323px;
+}
+
+div#preamble {
+left:428px;
+width:366px;
+}
+
+div#preamble h3, div#requirements h3, div#participation h3 {
+padding-top:20px;
+}
+
+div#preamble p, div#requirements p, div#participation p, div#explanation p, div#benefits p, div#preamble h3, div#requirements h3, div#participation h3, div#explanation h3, div#benefits h3, div#requirements p, div#requirements h3 {
+	padding-left:8px;
+	padding-right:8px;
+	text-align:justify;
+	color: #333333;
+}
+
+div#explanation {
+	width:366px;
+	top: 560px;
+	left: 44px;
+}
+
+div#ejercicios {
+	width:366px;
+	top: 920px;
+	left: 44px;
+}
+
+
+div#explanation h3, div#benefits h3 {
+padding-top:15px;
+}
+
+div#participation {
+	left:44px;
+	width:366px;
+	top: 322px;
+}
+
+div#benefits {
+	left:426px;
+	width:366px;
+	top: 560px;
+}
+
+div#footer {
+	position:absolute;
+	top:1200px;
+	left:44px;
+	font-size: 12px;
+}
+
+p {
+font-size:0.9em;
+}
