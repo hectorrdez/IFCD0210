@@ -78,7 +78,7 @@ function cambiarTitulo(){
 function dameHora(){
 	var fecha = new Date();
 	var fechaActual= fecha.getDate() + "/" + (fecha.getMonth()+1)+ "/" 
-					+ fecha.getYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
+					+ fecha.getFullYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
 	document.getElementById("hora").innerHTML= fechaActual;					
 }
 
