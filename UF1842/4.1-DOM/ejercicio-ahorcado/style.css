@@ -14,6 +14,7 @@ main{
 }
 article.display{
     height: 100px;
+    text-align: center;
 }
 div.displayPhrase{
     display: flex;
@@ -24,7 +25,7 @@ div.displayPhrase > div.letter{
     border-bottom: 1px solid black;
     font-size: xx-large;
     margin: 0 5px;
-    width: 20px;
+    width: 100px;
 }
 main > section > article.inputs{
     display: flex;
@@ -38,8 +39,8 @@ main > section > article.inputs{
 .fail{
     text-decoration: line-through;
 }
-article.keyboard{
-}
+/* article.keyboard{
+} */
 article.keyboard > button{
     border: 1px solid white;
     border-radius: 50%;
