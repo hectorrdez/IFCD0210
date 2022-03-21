@@ -47,7 +47,7 @@ document.getElementById("aumentarIMG").onclick = aumentarIMG;
 document.getElementById("ocultarDiv").onclick = ocultarDiv;
 document.getElementById("aparecerDiv").onclick = aparecerDiv;
 document.getElementById("whydoweuseit").onclick = cambioWhy;
-document.querySelector("input[type='button']").onclick = validar;
+// document.querySelector("input[type='button']").onclick = validar;
 
 function inicial(){
 	document.getElementById("subtitulo").style.color = "red";
@@ -78,7 +78,7 @@ function cambiarTitulo(){
 function dameHora(){
 	var fecha = new Date();
 	var fechaActual= fecha.getDate() + "/" + (fecha.getMonth()+1)+ "/" 
-					+ fecha.getYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
+					+ fecha.getFullYear() + " " + fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
 	document.getElementById("hora").innerHTML= fechaActual;					
 }
 
@@ -101,50 +101,20 @@ function cambioWhy(){
 
 function validar(){
 	let nombre = document.getElementById("nombre");
-	let email = document.getElementById("email");
-	let error = 0;
-	let arroba = 0;
+	let email = document.getElementById("email").value;
+	let emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 	if(nombre.value.length < 5){
 		nombre.style.border="1px solid red";
 	}else{
 		nombre.style.border = "1px solid grey";
 	}
-	if(email.value.indexOf('@')<=0){
-		error++;
+	if(emailRegex.test(email)){
+		email.style.borderColor = "red";
+		return true;
 	}else{
-		email.style.border="1px solid grey";
+		email.style.borderColor = "red";
+		return false;
 	}
-	for(let i = 0; i < email.value.length; i++){
-		if(arroba > 1){
-			error++;
-		}
-		if(email.value[i] == '@'){
-			arroba++;
-		}
-	}
-	if(error > 0){
-		email.style.border="1px solid red";
-	}
-	// if(email[0] != '@'){
-	// 	for(let i = 0; i < email.length; i++){
-	// 		if(arroba > 0){
-	// 			if(arroba == 1 && email[i] == "."){
-
-	// 			}
-	// 			if(arroba == 2){
-	// 				email.style.border = "1px solid red";
-	// 				return false;
-	// 			}
-	// 		}
-	// 		if(email[i] == '@'){
-	// 			arroba++;
-	// 		}
-	// 	}
-	// 	if(arroba == 1 && punto == 1){
-	// 		email.style.border = "1px solid grey";
-	// 		return true;
-	// 	}
-	// }
 	
 }
 

@@ -142,12 +142,14 @@ div#preamble p, div#requirements p, div#participation p, div#explanation p, div#
 
 div#explanation {
 	width:366px;
+	height: fit-content;
 	top: 560px;
 	left: 44px;
 }
 
 div#ejercicios {
 	width:366px;
+	height: fit-content;
 	top: 920px;
 	left: 44px;
 }
