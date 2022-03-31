@@ -1,0 +1,7 @@
+Formulario completo
+Escribir un formulario de recogida de datos personales que conste de dos páginas.
+formulario.html En esta primera página se solicitan varios datos personales.
+datos.php En la segunda página se muestra lo que envíe el usuario (aunque esté en blanco). Para este cometido hacer uso de la función var_dump().
+Utiliza el tipo de campo que consideres más apropiado.
+Probar a mandarlo con valores vacíos, caracteres extraños y observar el resultado obtenido.
+Nuestro archivo datos.php debe ser capaz de procesar los datos recibidos sin importar que el método usado sea GET o POST.
