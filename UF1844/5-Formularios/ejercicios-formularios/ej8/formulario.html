@@ -8,19 +8,22 @@
 </head>
 <body>
     <form action="datos.php" method="get">
-        NOMBRE: <input type="text" name="nombre" id="nombre"><br>
-        EDAD: <select name="edades" id="edades">
+        Nombre: <input type="text" name="nombre" id="nombre"><br>
+        Edad: <select name="edades" id="edades">
+            <option value="seleccione un rango de edad">Seleccione un rango de edad</option>
+            <option value="18-30">18-30</option>
             <option value="30-50">30-50</option>
+            <option value="mas de 50">Más de 50</option>
         </select>
-        CORREO: <input type="email" name="email" id="email"><br>
-        CONTRASEÑA: <input type="password" name="pass" id="pass"><br>
-        REPITE: <input type="password" name="rpass" id="rpass"><br>
-        SEXO: <br>
+        Correo: <input type="email" name="email" id="email"><br>
+        Contraseña: <input type="password" name="pass" id="pass"><br>
+        Repite contraseña: <input type="password" name="rpass" id="rpass"><br>
+        Sexo: <br>
         <input type="radio" name="hombre" value="hombre">HOMBRE <br>
         <input type="radio" name="mujer" value="mujer">MUJER <br>
         <input type="radio" name="otros" value="otros">OTROS <br>
         <input type="checkbox" name="condiciones" id="condiciones"> Acepto las condiciones <br>
-        <input type="submit" value="ENVIAR">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
