@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, consolas;
+}
+
+header nav {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+header nav button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #F22E52;
+  border: 0;
+  position: relative;
+  display: inline-block;
+}
+header nav button a {
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  display: inline-block;
+  position: relative;
+}
+header nav button a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1D2F40;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header nav button a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+main {
+  min-height: 1000px;
+}
+
+footer {
+  background-color: #1D2F40;
+  color: white;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
