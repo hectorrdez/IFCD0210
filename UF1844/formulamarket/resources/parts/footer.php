@@ -1,4 +1,4 @@
 <footer>
-    <div class="copyright">© Todos los derechos reservados</div>
-    <div class="share-buttons"></div>
+    <div class="rights">© Todos los derechos reservados</div>
+    <div class="shareButtons"></div>
 </footer>

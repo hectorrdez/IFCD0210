@@ -1,10 +1,15 @@
-<?php 
-$title = "Inicio";
-include_once("./resources/parts/head.php");
-?>
+<?php session_start() ?>
+<?php $title = "Inicio" ?>
+<?php include_once("./resources/parts/head.php") ?>
 <body>
     <?php include_once("./resources/parts/header.php") ?>
-    <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem et debitis, possimus, iste eos nemo omnis officiis incidunt deleniti amet dolor libero, eaque culpa expedita atque! Laborum, autem ratione.</main>
+    <main>
+        <div class="sliderContainer">
+            <div class="sliderSection"></div>
+            <div class="control arrowPrev"><</div>
+            <div class="control arrowNext"></div>
+        </div>
+    </main>
     <?php include_once("./resources/parts/footer.php") ?>
 </body>
 </html>
