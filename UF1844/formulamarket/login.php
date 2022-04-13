@@ -19,3 +19,20 @@ if(isset($_SESSION['name'])){
     <?php include_once("./resources/parts/footer.php") ?>
     <script src="/resources/code/redirect.js"></script>
 </body>
+<?php
+    function writeLog($address, $name, $time, $type){
+        $file = file_get_contents('./resources/logs/'.$address);
+        $array = json_decode($file,true);
+        $array2['name'] = $name;
+        $array2['time'] = $time;
+        $array2['type'] = $type;
+        if($array != null){
+            array_push($array,$array2);
+            $json = json_encode($array);
+        }else{
+            $arrayfinal = Array($array2);
+            $json = json_encode($arrayfinal);
+        }
+        file_put_contents('./resources/logs/'.$address,$json);
+    }
+?>

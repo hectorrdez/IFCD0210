@@ -103,12 +103,11 @@ nav .login a:hover::after {
 }
 
 body.login {
-  background-color: #1D2F40;
   position: relative;
+  background-image: url("/resources/imgs/background.jpg");
 }
 body.login main {
   position: relative;
-  background-image: url("/resources/imgs/background.jpg");
   width: 100%;
 }
 body.login main form {
@@ -152,10 +151,12 @@ body.login .redirect {
   font-size: 0.8em;
   font-style: italic;
 }
+body.login footer {
+  position: absolute;
+  bottom: 0;
+}
 
 footer {
-  position: static;
-  bottom: 0;
   padding: 1%;
   background-color: #1D2F40;
   color: white;

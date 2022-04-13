@@ -6,6 +6,7 @@
             if($_POST['name'] == NAME && $_POST['pass'] == PASS){
                 $_SESSION['name'] = $_POST['name'];
                 if(!isset($_SESSION['last'])){
+                    writeLog('login.json',$_POST['name'],date('r'),'login');
                     sleep(2);
                     header('Location: index.php');
 

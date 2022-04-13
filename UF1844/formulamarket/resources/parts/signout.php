@@ -6,6 +6,7 @@
 </form>
 <?php if(isset($_POST['opt'])){
     if($_POST['opt'] == 'Si'){
+        writeLog('login.json',$_SESSION['name'],date('r'),'logout');
         session_destroy();
     }
     header('Location: index.php');
