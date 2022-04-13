@@ -5,11 +5,15 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: helvetica, consolas, Arial;
   position: relative;
 }
 
+header {
+  position: relative;
+}
 header .logo {
   width: 100%;
 }
@@ -18,6 +22,7 @@ header .logo img {
 }
 
 nav {
+  position: relative;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -78,6 +83,7 @@ nav .login a:hover::after {
 
 .sliderContainer {
   width: 100%;
+  margin: 2em 0;
 }
 .sliderContainer .sliderSection {
   display: flex;
@@ -87,21 +93,22 @@ nav .login a:hover::after {
 }
 .sliderContainer .sliderSection .slider {
   width: 20%;
-  height: 10%;
+  height: 12em;
+  max-height: 100%;
 }
 .sliderContainer .sliderSection .slider img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-}
-.sliderContainer .sliderSection .active {
-  transform: scale(2);
+  object-fit: cover;
 }
 
 body.login {
-  background-image: url("/resources/imgs/background.jpg");
+  background-color: #1D2F40;
+  position: relative;
 }
 body.login main {
+  position: relative;
+  background-image: url("/resources/imgs/background.jpg");
   width: 100%;
 }
 body.login main form {
@@ -147,6 +154,8 @@ body.login .redirect {
 }
 
 footer {
+  position: static;
+  bottom: 0;
   padding: 1%;
   background-color: #1D2F40;
   color: white;

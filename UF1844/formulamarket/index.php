@@ -15,6 +15,7 @@
             <div class="control arrowPrev"><</div>
             <div class="control arrowNext">></div>
         </div>
+        <script src="resources/code/slider.js"></script>
     </main>
     <?php include_once("./resources/parts/footer.php") ?>
 </body>

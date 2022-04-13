@@ -21,7 +21,7 @@
     }
 ?>
 <form method="post" action="" onsubmit="redirect()">
-    Iniciar sesion: <?= $error?><br>
+    Iniciar sesion:<br>
     <hr>
     <?php 
         if(isset($error)){ 
