@@ -17,4 +17,5 @@ if(isset($_SESSION['name'])){
     ?>
     </main>
     <?php include_once("./resources/parts/footer.php") ?>
+    <script src="/resources/code/redirect.js"></script>
 </body>

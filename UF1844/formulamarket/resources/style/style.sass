@@ -5,9 +5,12 @@ $color4: #1D2F40
 $color5: #2EF2F2
 *
     box-sizing: border-box
+    user-select: none
+    -webkit-user-drag: none
 body
     margin: 0
     font-family: helvetica, consolas, Arial
+    position: relative
 header
     .logo
         width: 100%
@@ -64,6 +67,24 @@ nav
             &:hover::after
                 transform: scaleX(1)
                 transform-origin: bottom left
+
+.sliderContainer
+    width: 100%
+    .sliderSection
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        .slider 
+            width: 20%
+            height: 10%
+            img
+                width: 100%
+                height: 100%
+                object-fit: fill
+        .active 
+            transform: scale(2)
+
 body.login
     background-image: url("/resources/imgs/background.jpg")
     main
@@ -87,7 +108,22 @@ body.login
             input[type=submit]
                 margin: 5%
                 padding: 5px
-                width: 30%
+                min-width: 30%
+                max-width: fit-content
+    .error
+        margin: 0.2em
+        border: 0.1em dashed $color1
+        border-radius: 40px
+        padding: .2em .5em
+        color: $color1
+        background: rgba($color1,0.4)
+        display: flex
+        justify-content: space-between
+    .redirect
+        margin-top: 0.1em
+        color: #15f80e
+        font-size: 0.8em
+        font-style: italic
 
 footer
     padding: 1%
@@ -97,7 +133,24 @@ footer
     width: 100%
     justify-content: center
     align-items: center
-    position: absolute
-    left: 0
-    bottom: 0
-      
+    .content
+        .shareButtons
+            display: flex
+            justify-content: center
+            svg
+                filter: invert(100%)
+                opacity: 60%
+                margin: .5em
+                &:hover
+                    animation-name: shareHover
+                    animation-duration: .5s
+                    animation-fill-mode: forwards
+                    animation-timing-function: ease-in-out
+                    animation-direction: alternate
+@keyframes shareHover
+    0%
+        transform: scale(1)
+        opacity: 60%
+    100%
+        transform: scale(1.5)
+        opacity: 100%
