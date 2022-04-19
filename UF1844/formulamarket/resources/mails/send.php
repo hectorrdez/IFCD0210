@@ -59,6 +59,8 @@ try {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
         echo 'Message sent!';
+        sleep(2);
+        header('Location: index.php');
     }
    
 

@@ -19,11 +19,9 @@ header {
 header .logo {
   width: 100%;
   background-color: #f23d6d;
-  display: flex;
-  justify-content: center;
 }
 header .logo img {
-  width: 90%;
+  width: 100%;
 }
 
 nav {
@@ -96,7 +94,6 @@ footer {
   background-color: #1D2F40;
   color: white;
   width: 100%;
-  margin-top: 2em;
 }
 footer .content .rights {
   display: flex;
@@ -119,7 +116,50 @@ footer .content .shareButtons svg:hover {
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
+footer .content .address {
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
+}
+footer .content .element {
+  height: fit-content;
+}
 
+@media screen and (max-width: 600px) {
+  .wrapper-3 {
+    display: grid;
+    grid-template-rows: 3;
+  }
+  .wrapper-3 .element-1 {
+    grid-row: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .wrapper-3 .element-2 {
+    grid-row: 2;
+    margin: 0.2em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .wrapper-3 .element-3 {
+    grid-row: 3;
+    margin: 0.2em 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrapper-3 {
+    display: grid;
+    grid-template-rows: 1;
+    grid-column: 3;
+  }
+  .wrapper-3 .element-1 {
+    grid-column: 1;
+  }
+  .wrapper-3 .element-2 {
+    grid-column: 2;
+  }
+  .wrapper-3 .element-3 {
+    grid-column: 3;
+  }
+}
 body.login main {
   position: relative;
   width: 100%;
@@ -195,7 +235,7 @@ h2.categoryTitle {
 }
 .categories .category {
   height: 500px;
-  width: 20%;
+  width: 40%;
   margin: 0 2%;
   border-radius: 40px;
 }
@@ -211,9 +251,15 @@ h2.categoryTitle {
 .categories .category:hover img {
   animation: zoomImg 1s normal forwards ease-in-out;
 }
+.categories .category:not(:hover) {
+  overflow: hidden;
+}
+.categories .category:not(:hover) img {
+  animation: zooImg 1s reverse backwards ease-in-out;
+}
 
 main.alone {
-  min-height: 800px;
+  padding: 2em;
   width: 100%;
 }
 
@@ -334,6 +380,14 @@ span.red {
     transform: scale(1.5);
   }
 }
+@keyframes zooImgReverse {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes changeColor {
   0% {
     background: #F22E52;
@@ -364,48 +418,186 @@ span.red {
 .wrapper-6 {
   display: grid;
 }
-.wrapper-6 .img-product {
-  width: 100%;
-  height: 30%;
+.wrapper-6 .product {
+  height: 100%;
+  margin: 0.5em;
 }
-.wrapper-6 .img-product img {
-  border-radius: 20px;
+.wrapper-6 .product .img-product {
+  width: 100%;
+  height: 50%;
+}
+.wrapper-6 .product .img-product:hover {
+  overflow: hidden;
+}
+.wrapper-6 .product .img-product:hover img {
+  animation: zoomImg 1s normal forwards ease-in-out;
+}
+.wrapper-6 .product .img-product img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.wrapper-6 .product {
-  border: 1px solid black;
-  height: 30em;
-  width: 30%;
+.wrapper-6 .product .name-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2ef2f2;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: italic;
+  width: 100%;
+  height: 10%;
+  user-select: text;
 }
 .wrapper-6 .product .descr-product {
-  height: 10em;
+  margin: 0.2em 0;
+  height: fit-content;
 }
-.wrapper-6 .product-1 {
-  grid-row: 1;
-  grid-column: 1;
+.wrapper-6 .product .descr-product ul li {
+  list-style: url(/resources/imgs/icon-list.png);
+  user-select: text;
 }
-.wrapper-6 .product-2 {
-  grid-row: 1;
-  grid-column: 2;
+.wrapper-6 .product .last-price {
+  font-weight: 700;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2EF2F2;
 }
-.wrapper-6 .product-3 {
-  grid-row: 1;
-  grid-column: 3;
+.wrapper-6 .product .last-price .last-price-product {
+  text-decoration: line-through;
+  margin-right: 0.5em;
 }
-.wrapper-6 .product-4 {
-  grid-row: 2;
-  grid-column: 1;
+.wrapper-6 .product .last-price .offer {
+  background: red;
+  padding: 0.2em 0.5em;
+  color: white;
+  border-radius: 20px;
 }
-.wrapper-6 .product-5 {
-  grid-row: 2;
-  grid-column: 2;
+.wrapper-6 .product .italic {
+  font-style: italic;
 }
-.wrapper-6 .product-6 {
-  grid-row: 2;
-  grid-column: 3;
+.wrapper-6 .product .price-product {
+  height: 10%;
+  background-color: #F22E52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+.wrapper-6 .product .price-product:hover {
+  background-color: #f23d6d;
+}
+.wrapper-6 .product .price-product:hover:active {
+  background-color: #F22E52;
+}
+
+@media screen and (min-width: 960px) {
+  .product-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .product-2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .product-3 {
+    grid-row: 1;
+    grid-column: 3;
+  }
+
+  .product-4 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .product-5 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .product-6 {
+    grid-row: 2;
+    grid-column: 3;
+  }
+}
+@media screen and (max-width: 960px) and (min-width: 600px) {
+  .product-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .product-2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .product-3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .product-4 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .product-5 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .product-6 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
+@media screen and (max-width: 600px) {
+  .product-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .product-2 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .product-3 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .product-4 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+
+  .product-5 {
+    grid-row: 5;
+    grid-column: 1;
+  }
+
+  .product-6 {
+    grid-row: 6;
+    grid-column: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
