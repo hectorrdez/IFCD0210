@@ -6,16 +6,20 @@
             if($_POST['name'] == NAME && $_POST['pass'] == PASS){
                 $_SESSION['name'] = $_POST['name'];
                 if(!isset($_SESSION['last'])){
-                    writeLog('login.json',$_POST['name'],date('r'),'login');
+                    writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'login');
                     sleep(2);
                     header('Location: index.php');
-
+                    
                 }else{
+                    writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'login');
                     sleep(2);
                     header("Location:".$_SESSION['last']);
                 }  
                
+            }else if($_POST['name'] == 'register'){
+                header('Location: register.php');
             }else{
+                writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'fail');
                 $error = true;
             }
         }
@@ -35,7 +39,7 @@
     <div class="pass">
         <input type="password" name="pass" placeholder="Contraseña">
     </div>
-    <div class="submit">
+    <div class="submit controlsButtons">
         <input type="submit" value="Iniciar Sesion">
     </div>
     <input type="hidden" name="send" value="true">

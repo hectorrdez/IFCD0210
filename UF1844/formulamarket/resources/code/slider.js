@@ -6,8 +6,6 @@ for(let i = 0; i < sliderImgsDiv.length; i++){
     sliderImgsDiv[i].onmouseover = stopSliding;
 }
 
-startSliding();
-
 let imgs = new Array(5);
 for(let i = 0; i < imgs.length; i++){
     imgs[i] = i+1;

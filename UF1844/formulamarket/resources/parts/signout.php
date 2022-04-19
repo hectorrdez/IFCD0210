@@ -6,8 +6,14 @@
 </form>
 <?php if(isset($_POST['opt'])){
     if($_POST['opt'] == 'Si'){
-        writeLog('login.json',$_SESSION['name'],date('r'),'logout');
+        writeLog('login.json',$_SESSION['name'],'',date('c'),'logout');
         session_destroy();
+        header('Location: index.php');
+    }else{
+        if(isset($_SESSION['last'])){
+            header('Location: '.$_SESSION['last']);
+        }else{
+            header('Location: index.php');
+        }
     }
-    header('Location: index.php');
 } ?>
