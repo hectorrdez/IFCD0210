@@ -33,7 +33,7 @@
             </div>
             <div class="product product-3">
                 <div class="img-product"><img src="./resources/imgs/formula-classic/lotus-72d.jpg" alt="Lotus 72d"></div>
-                <div class="name-product">BGP-001</div>
+                <div class="name-product">LT-76D</div>
                 <div class="descr-product"><ul>
                     <li>Año: 1970</li>
                     <li>Escuderia: Lotus</li>
