@@ -1,0 +1,516 @@
+$color1: #F22E52
+$color2: #f23d6d
+$color3: #308AD9
+$color4: #1D2F40
+$color5: #2EF2F2
+*
+    box-sizing: border-box 
+    user-select: none
+    -webkit-user-drag: none
+body
+    position: relative
+    margin: 0
+    font-family: helvetica, consolas, Arial
+    position: relative
+    background-color: $color4
+header
+    position: relative
+    background-color: white
+    .logo
+        width: 100%
+        background-color: $color2
+
+        img
+            width: 100%
+nav
+    position: relative
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: space-between
+    button
+        width: 100%
+        padding: 10px 0
+        background-color: $color1
+        border: 0
+        position: relative
+        display: inline-block
+        a
+            font-size: 1.2em
+            letter-spacing: 0.05em
+            text-decoration: none
+            color: white
+            padding: 5px 0
+            display: inline-block
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                width: 100%
+                transform: scaleX(0)
+                height: 2px
+                bottom: 0
+                left: 0
+                background-color: $color4
+                transform-origin: bottom right
+                transition: transform 0.25s ease-out
+            &:hover::after
+                transform: scaleX(1)
+                transform-origin: bottom left
+    .login
+        a
+            color: $color5
+            &::after
+                content: ''
+                position: absolute
+                width: 100%
+                transform: scaleX(0)
+                height: 2px
+                bottom: 0
+                left: 0
+                background-color: $color5
+                transform-origin: bottom right
+                transition: transform 0.25s ease-out
+            &:hover::after
+                transform: scaleX(1)
+                transform-origin: bottom left
+main
+    background-color: white
+    padding: 2% 0
+footer
+    padding: 1%
+    background-color: $color4
+    color: white
+    width: 100%
+    .content
+        .rights
+            display: flex
+            justify-content: center
+            opacity: 0.7
+        .shareButtons
+            display: flex
+            justify-content: center
+            svg
+                filter: invert(100%)
+                opacity: 60%
+                margin: .5em
+                &:hover
+                    animation-name: shareHover
+                    animation-duration: .5s
+                    animation-fill-mode: forwards
+                    animation-timing-function: ease-in-out
+                    animation-direction: alternate
+        .address
+            display: flex
+            justify-content: center
+            opacity: 0.7
+        .element
+            height: fit-content
+@media screen and (max-width: 600px)
+    .wrapper-3
+        display: grid
+        grid-template-rows: 3
+        .element-1
+            grid-row: 1
+            border-bottom: 1px solid rgba(white, 0.7)
+        .element-2
+            grid-row: 2
+            margin: 0.2em 0
+            border-bottom: 1px solid rgba(white, 0.7)
+        .element-3
+            grid-row: 3
+            margin: 0.2em 0
+@media screen and (min-width: 600px)
+    .wrapper-3
+        display: grid
+        grid-template-rows: 1
+        grid-column: 3
+        .element-1
+            grid-column: 1
+        .element-2
+            grid-column: 2
+        .element-3
+            grid-column: 3
+
+body.login
+    main
+        position: relative
+        width: 100%
+        background-image: url("/resources/imgs/background.jpg")
+        form
+            margin: auto
+            margin: 10% auto
+            width: 30%
+            height: 30%
+            padding: 2em
+            background-color: white
+            border-radius: 20px
+            .submit
+                display: flex
+                justify-content: center
+                align-items: center
+            input
+                width: 100%
+                height: 2em
+                margin: 1em 0
+            input[type=submit],[type=reset]
+                margin: 5%
+                padding: 5px
+                min-width: 30%
+                max-width: fit-content
+            .controlButtons
+                display: flex
+                justify-content: space-around
+                input
+                    width: 50%
+    .error
+        margin: 0.2em
+        border: 0.1em dashed $color1
+        border-radius: 40px
+        padding: .2em .5em
+        color: $color1
+        background: rgba($color1,0.4)
+        display: flex
+        justify-content: space-between
+    .redirect
+        margin-top: 0.1em
+        color: #15f80e
+        font-size: 0.8em
+        font-style: italic
+
+@keyframes shareHover
+    0%
+        transform: scale(1)
+        opacity: 60%
+    100%
+        transform: scale(1.5)
+        opacity: 100%
+h2.categoryTitle
+    text-align: center
+.categories
+    display: flex
+    justify-content: center
+    align-content: center
+    .category
+        height: 500px
+        width: 40%
+        margin: 0 2%
+        // border: 1px solid black
+        border-radius: 40px
+        img
+            border-radius: 40px 
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &:hover
+            overflow: hidden
+            img
+                animation: zoomImg 1s normal forwards ease-in-out
+        &:not(:hover)
+            overflow: hidden
+            img
+                animation: zooImg 1s reverse backwards ease-in-out
+            
+main.alone
+    padding: 2em
+    width: 100%
+
+.center-H
+    display: flex
+    justify-content: center
+.center-V
+    display: flex
+    align-items: center
+.center
+    display: flex
+    align-items: center
+    justify-content: center
+.map
+    width: 40em
+    height: 35.5em
+    border-radius: 20px
+    border: 1px solid black    
+
+.wrapper-2
+    width: 100%
+    @media screen and(min-width: 1020px)
+        display: flex
+        justify-content: space-around
+        .survey
+            width: 40em
+            height: 30em
+            form
+                padding: 1em
+                border-radius: 40px
+                border: 2px solid rgba($color1, 0.5)
+                margin-left: 1em
+                font-style: italic
+                box-shadow: .2em .2em rgba(00, 00, 00, 0.2)
+        iframe
+            height: 35.5em
+            width: 40em
+            border: 2px solid rgba( $color1, 0.5)
+            border-radius: 20px
+            box-shadow: .2em .2em rgba(00, 00, 00, 0.2)
+                
+    @media screen and(max-width: 1020px)
+        form
+            width: 100%
+        .map
+                height: 35.5em
+                width: 100%
+    form
+        h2.form
+            margin-bottom: 0
+        hr
+            margin-bottom: 1em
+        input
+            margin-bottom: 1em
+            width: 100%
+            padding: 1em
+            border-radius: 40px
+            border: 1px solid grey
+        textarea
+            border-bottom-left-radius: 20px
+            border-top-left-radius: 20px
+            border-top-right-radius: 20px
+            padding: 1em
+            width: 100%
+            font-size: 1.2em
+        label
+            position: relative !important
+            left: 0 !important
+            padding-bottom: .2em
+        .buttons
+            margin-top: 1em
+            display: flex
+            object-fit: cover !important
+        input[type=submit],[type=reset]
+            width: 50%
+            background-color: $color1
+            color: white
+            font-size: 1em
+            &:hover
+                animation-name: changeColor
+                animation-duration: .5s
+                animation-direction: alternate
+                animation-fill-mode: forwards
+                animation-timing-function: ease-in-out
+            
+span.red
+    color: $color1
+@keyframes zoomImg
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(1.5)
+@keyframes zooImgReverse
+    0%
+        transform: scale(1.5)
+    100%
+        transform: scale(1)
+@keyframes changeColor
+    0%
+        background: $color1
+        font-size: 1em
+    100%
+        background: $color2
+        font-size: 1.2em
+.swiper 
+    width: 100%
+    height: 30em
+    .swiper-slide
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .swiper-button-next, .swiper-button-prev
+        color: $color2
+    .swiper-pagination-bullet-active
+        background: $color2
+.wrapper
+    display: grid
+    .product
+        // border: 1px solid black
+        height: 100%
+        margin: 0.5em
+        .img-product
+            width: 100%
+            height: 50%
+            &:hover
+                overflow: hidden
+                img
+                    animation: zoomImg 1s normal forwards ease-in-out
+            img
+                border-top-left-radius: 20px
+                border-top-right-radius: 20px
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center
+    .name-product
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba($color5, 1)
+        color: white
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 2rem
+        font-style: italic
+        width: 100%
+        height: 10%
+        user-select: text
+        .descr-product
+            margin: .2em 0
+            height: fit-content
+            ul
+                li
+                    list-style: url(/resources/imgs/icon-list.png)
+                    user-select: text
+        .last-price
+            font-weight: 700
+            font-size: 2em
+            color: rgba(black, 0.75)
+            padding: .5em 0
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: $color5
+            .last-price-product
+                text-decoration: line-through
+                margin-right: .5em
+            .offer
+                background: rgba(red, 1)
+                padding: .2em .5em
+                color: white
+                border-radius: 20px
+        .italic
+            font-style: italic
+        .price-product 
+            height: 10%
+            background-color: $color1
+            display: flex
+            justify-content: center
+            align-items: center
+            border-bottom-left-radius: 20px
+            border-bottom-right-radius: 20px
+            color: white
+            font-weight: 700
+            font-size: 2em
+            letter-spacing: .2em
+            cursor: pointer
+            &:hover
+                background-color: $color2
+                &:active
+                    background-color: $color1
+@media screen and (min-width: 960px)
+    .product-1
+        grid-row: 1
+        grid-column: 1
+    .product-2
+        grid-row: 1
+        grid-column: 2
+    .product-3
+        grid-row: 1
+        grid-column: 3
+    .product-4
+        grid-row: 2
+        grid-column: 1
+    .product-5
+        grid-row: 2
+        grid-column: 2
+    .product-6
+        grid-row: 2
+        grid-column: 3
+@media screen and (max-width: 960px) and (min-width: 600px)
+    .product-1
+        grid-row: 1
+        grid-column: 1
+    .product-2
+        grid-row: 1
+        grid-column: 2
+    .product-3
+        grid-row: 2
+        grid-column: 1
+    .product-4
+        grid-row: 2
+        grid-column: 2
+    .product-5
+        grid-row: 3
+        grid-column: 1
+    .product-6
+        grid-row: 3
+        grid-column: 2
+
+@media screen and (max-width: 600px)
+    .product-1
+        grid-row: 1
+        grid-column: 1
+    .product-2
+        grid-row: 2
+        grid-column: 1
+    .product-3
+        grid-row: 3
+        grid-column: 1
+    .product-4
+        grid-row: 4
+        grid-column: 1
+    .product-5
+        grid-row: 5
+        grid-column: 1
+    .product-6
+        grid-row: 6
+        grid-column: 1
+
+.details
+    display: grid
+    row-gap: 1em
+    margin: 0
+    .img-product
+        border: 1px solid black
+        width: 60%
+        height: 100%
+        &:hover
+            overflow: hidden
+            img
+                animation: zoomImg 1s normal forwards ease-in-out
+        img
+            border-top-left-radius: 20px
+            border-top-right-radius: 20px
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .details-product
+        border: 1px solid black
+        width: 100%
+        .name
+            display: flex
+            justify-content: center
+            align-items: center
+            color: rgba($color5, 1)
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 2rem
+            font-style: italic
+            width: 100%
+            height: 10%
+            user-select: text
+            text-decoration: underline
+
+    @media screen and (min-width: 960px)
+        .imgProduct
+            grid-column: 1
+            grid-row: 1
+        .details-product
+            grid-column: 2
+            grid-row: 1
+    @media screen and (max-width: 960px)
+        .imgProduct
+            grid-column: 1
+            grid-row: 1
+        .details-product
+            grid-column: 1
+            grid-row: 2
