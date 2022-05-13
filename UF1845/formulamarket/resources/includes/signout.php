@@ -9,13 +9,15 @@
 <?php if(isset($_POST['opt'])){
     if($_POST['opt'] == 'Si'){
         writeLog('login.json',$_SESSION['name'],'',date('c'),'logout');
+        include_once('./resources/functions/connection.php');
+        $connection -> query('insert into `log`(`name`,`type`) values("'.$_SESSION['name'].'","logout")');
         session_destroy();
-        header('Location: index.php');
+        header('Location: ./');
     }else{
         if(isset($_SESSION['last'])){
             header('Location: '.$_SESSION['last']);
         }else{
-            header('Location: index.php');
+            header('Location: ./');
         }
     }
 } ?>

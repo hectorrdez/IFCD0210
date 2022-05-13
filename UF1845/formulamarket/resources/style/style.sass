@@ -214,7 +214,6 @@ h2.categoryTitle
 main.alone
     padding: 2em
     width: 100%
-    display: flex
 
 .center-H
     display: flex
@@ -333,9 +332,15 @@ span.red
 .wrapper
     display: grid
     .product
+        a
+            text-decoration: none
+            color: black
         // border: 1px solid black
         height: 100%
-        margin: 0.5em
+        max-width: 30em
+        margin:0.5em
+        row-gap: 0.5em
+        column-gap: 0.5em
         .img-product
             width: 100%
             height: 50%
@@ -363,49 +368,48 @@ span.red
         width: 100%
         height: 10%
         user-select: text
-        .descr-product
-            margin: .2em 0
-            height: fit-content
-            ul
-                li
-                    list-style: url(/resources/imgs/icon-list.png)
-                    user-select: text
-        .last-price
-            font-weight: 700
-            font-size: 2em
-            color: rgba(black, 0.75)
-            padding: .5em 0
-            display: flex
-            justify-content: center
-            align-items: center
-            background-color: $color5
-            .last-price-product
-                text-decoration: line-through
-                margin-right: .5em
-            .offer
-                background: rgba(red, 1)
-                padding: .2em .5em
-                color: white
-                border-radius: 20px
-        .italic
-            font-style: italic
-        .price-product 
-            height: 10%
-            background-color: $color1
-            display: flex
-            justify-content: center
-            align-items: center
-            border-bottom-left-radius: 20px
-            border-bottom-right-radius: 20px
+    .last-price
+        font-weight: 700
+        font-size: 2em
+        color: rgba(black, 0.75)
+        padding: .5em 0
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $color5
+        .last-price-product
+            text-decoration: line-through
+            margin-right: .5em
+        .offer
+            background: rgba(red, 1)
+            padding: .2em .5em
             color: white
-            font-weight: 700
-            font-size: 2em
-            letter-spacing: .2em
-            cursor: pointer
-            &:hover
-                background-color: $color2
-                &:active
-                    background-color: $color1
+            border-radius: 20px
+    .italic
+        font-style: italic
+    .price-product 
+        height: 10%
+        background-color: $color1
+        display: flex
+        justify-content: center
+        align-items: center
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        color: white
+        font-weight: 700
+        font-size: 2em
+        letter-spacing: .2em
+        cursor: pointer
+        text-decoration: none
+        &:hover
+            background-color: $color2
+            &:active
+                background-color: $color1
+.descr-product
+    margin: .2em 0
+    height: fit-content
+.change-list
+    list-style:url('/resources/imgs/icon-list.png')
 @media screen and (min-width: 960px)
     .product-1
         grid-row: 1

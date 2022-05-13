@@ -3,23 +3,27 @@
     DEFINE('PASS','admin');
     if(isset($_POST['send'])){
         if($_POST['send'] == 'true'){
-            if($_POST['name'] == NAME && $_POST['pass'] == PASS){
-                $_SESSION['name'] = $_POST['name'];
-                if(!isset($_SESSION['last'])){
+            include_once('./resources/functions/connection.php');
+            $result = $connection -> query('SELECT name, pass from users where name = "'.$_POST['name'].'"');
+            if(mysqli_affected_rows($connection) != 0){
+                $check = mysqli_fetch_assoc($result);
+                if($_POST['name'] == $check['name'] && sha1($_POST['pass']) == $check['pass']){
+                    $_SESSION['name'] = $_POST['name'];
                     writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'login');
+                    $connection->query('insert into `log`(`name`,`pass`,`type`) values("'.$_POST['name'].'","'.sha1($_POST['pass']).'","login-success")');
                     sleep(2);
-                    header('Location: index.php');
-                    
+                    if(!isset($_SESSION['last'])){
+                        header('Location: index.php');
+                        
+                    }else{
+                        header("Location:".$_SESSION['last']);
+                    }  
                 }else{
-                    writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'login');
-                    sleep(2);
-                    header("Location:".$_SESSION['last']);
-                }  
-               
-            }else if($_POST['name'] == 'register'){
-                header('Location: register.php');
+                    $connection->query('insert into `log`(`name`,`pass`,`type`) values("'.$_POST['name'].'","'.sha1($_POST['pass']).'","login-fail")');
+                    writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'login-fail');
+                    $error = true;
+                }
             }else{
-                writeLog('login.json',$_POST['name'],$_POST['pass'],date('c'),'fail');
                 $error = true;
             }
         }

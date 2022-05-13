@@ -261,7 +261,6 @@ h2.categoryTitle {
 main.alone {
   padding: 2em;
   width: 100%;
-  display: flex;
 }
 
 .center-H {
@@ -421,7 +420,14 @@ span.red {
 }
 .wrapper .product {
   height: 100%;
+  max-width: 30em;
   margin: 0.5em;
+  row-gap: 0.5em;
+  column-gap: 0.5em;
+}
+.wrapper .product a {
+  text-decoration: none;
+  color: black;
 }
 .wrapper .product .img-product {
   width: 100%;
@@ -455,15 +461,7 @@ span.red {
   height: 10%;
   user-select: text;
 }
-.wrapper .name-product .descr-product {
-  margin: 0.2em 0;
-  height: fit-content;
-}
-.wrapper .name-product .descr-product ul li {
-  list-style: url(/resources/imgs/icon-list.png);
-  user-select: text;
-}
-.wrapper .name-product .last-price {
+.wrapper .last-price {
   font-weight: 700;
   font-size: 2em;
   color: rgba(0, 0, 0, 0.75);
@@ -473,20 +471,20 @@ span.red {
   align-items: center;
   background-color: #2EF2F2;
 }
-.wrapper .name-product .last-price .last-price-product {
+.wrapper .last-price .last-price-product {
   text-decoration: line-through;
   margin-right: 0.5em;
 }
-.wrapper .name-product .last-price .offer {
+.wrapper .last-price .offer {
   background: red;
   padding: 0.2em 0.5em;
   color: white;
   border-radius: 20px;
 }
-.wrapper .name-product .italic {
+.wrapper .italic {
   font-style: italic;
 }
-.wrapper .name-product .price-product {
+.wrapper .price-product {
   height: 10%;
   background-color: #F22E52;
   display: flex;
@@ -499,12 +497,21 @@ span.red {
   font-size: 2em;
   letter-spacing: 0.2em;
   cursor: pointer;
+  text-decoration: none;
 }
-.wrapper .name-product .price-product:hover {
+.wrapper .price-product:hover {
   background-color: #f23d6d;
 }
-.wrapper .name-product .price-product:hover:active {
+.wrapper .price-product:hover:active {
   background-color: #F22E52;
+}
+
+.descr-product {
+  margin: 0.2em 0;
+  height: fit-content;
+}
+.change-list{
+  list-style:url('/resources/imgs/icon-list.png')
 }
 
 @media screen and (min-width: 960px) {
