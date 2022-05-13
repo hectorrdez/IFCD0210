@@ -214,6 +214,7 @@ h2.categoryTitle
 main.alone
     padding: 2em
     width: 100%
+    display: flex
 
 .center-H
     display: flex
@@ -463,22 +464,29 @@ span.red
     .product-6
         grid-row: 6
         grid-column: 1
-
+main.product
+    width: 100%
+    display: flex
+    justify-content: center
 .details
     display: grid
-    row-gap: 1em
+    column-gap: 0em
+    grid-column-gap: 0
+    gap: 0
     margin: 0
+    width: 100%
+    padding: 3em
     .img-product
         border: 1px solid black
-        width: 60%
-        height: 100%
+        width: 40em
+        height: 40em
+        border-radius: 20px
         &:hover
             overflow: hidden
             img
                 animation: zoomImg 1s normal forwards ease-in-out
         img
-            border-top-left-radius: 20px
-            border-top-right-radius: 20px
+            border-radius: 20px
             width: 100%
             height: 100%
             object-fit: cover
@@ -487,8 +495,6 @@ span.red
         border: 1px solid black
         width: 100%
         .name
-            display: flex
-            justify-content: center
             align-items: center
             color: rgba($color5, 1)
             text-transform: uppercase
@@ -496,9 +502,65 @@ span.red
             font-size: 2rem
             font-style: italic
             width: 100%
-            height: 10%
+            height: fit-content
             user-select: text
             text-decoration: underline
+        .descr-product
+            margin: .2em 0
+            height: fit-content
+            ul
+                li
+                    list-style: url(/resources/imgs/icon-list.png)
+                    margin-top: 0.2em
+                    user-select: text
+                    font-size: 1.2em
+        .last-price
+            font-weight: 700
+            font-size: 2em
+            color: rgba(black, 0.75)
+            padding: .5em 0
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: $color5
+            .last-price-product
+                text-decoration: line-through
+                margin-right: .5em
+            .offer
+                background: rgba(red, 1)
+                padding: .2em .5em
+                color: white
+                border-radius: 20px
+        .italic
+            font-style: italic
+        .buy-ops
+            display: grid
+            .price-product 
+                width: fit-content
+                padding: .5em 3em
+                height: fit-content
+                background-color: $color1
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 20px
+                color: white
+                font-weight: 700
+                font-size: 1em
+                letter-spacing: .05em
+                cursor: pointer
+                &:hover
+                    background-color: $color2
+                    &:active
+                        background-color: $color1
+            .uds
+                margin: .3em 0
+                input[type=number]
+                    width: 3.5em
+                    font-size: 2em
+                    border: grey 1px solid
+                    color: grey
+            @media screen and (max-width: 300px)
 
     @media screen and (min-width: 960px)
         .imgProduct
@@ -514,3 +576,4 @@ span.red
         .details-product
             grid-column: 1
             grid-row: 2
+    

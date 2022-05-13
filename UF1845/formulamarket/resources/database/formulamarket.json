@@ -1,0 +1,31 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"formulamarket"},
+{"type":"table","name":"log","database":"formulamarket","data":
+[
+{"time":"2022-05-13 13:57:25","name":"hola","pass":"asdf","type":"asdfasd"},
+{"time":"2022-05-13 14:00:18","name":"hectorrdez","pass":"09379231c307c1bff583b184a157ae61d7f00bac","type":"register"}
+]
+}
+,{"type":"table","name":"product","database":"formulamarket","data":
+[
+{"id":"1","name":"F1-75","img":"Ferrari1","year":"2022","team":"Ferrari","power":"1000","weight":"780","price":"140000000","offer":null,"type":"modern"},
+{"id":"2","name":"w13","img":null,"year":"2022","team":"Mercedes","power":"980","weight":"797","price":"140000000","offer":null,"type":"modern"},
+{"id":"3","name":"amr-22","img":null,"year":"2022","team":"Aston Martin","power":"980","weight":"797","price":"14000000","offer":null,"type":"modern"},
+{"id":"4","name":"mcl-36","img":null,"year":"2022","team":"McLaren","power":"980","weight":"798","price":"140000000","offer":null,"type":"modern"},
+{"id":"5","name":"a-522","img":null,"year":"2022","team":"Alpine Renault","power":"980","weight":"798","price":"140000000","offer":null,"type":"modern"},
+{"id":"6","name":"rb-18","img":null,"year":"2022","team":"RedBull","power":"1060","weight":"795","price":"140000000","offer":null,"type":"modern"},
+{"id":"7","name":"bgp-001","img":null,"year":"2009","team":"Brawn GP","power":"800","weight":"650","price":"2000000","offer":null,"type":"classic"},
+{"id":"8","name":"f-312t","img":null,"year":"1975","team":"Ferrari","power":"500","weight":"450","price":"4000000","offer":null,"type":"classic"},
+{"id":"9","name":"lt-76d","img":null,"year":"1970","team":"Lotus","power":"440","weight":"550","price":"2500000","offer":null,"type":"classic"},
+{"id":"10","name":"r-26","img":null,"year":"2006","team":"Renault","power":"1000","weight":"650","price":"20000000","offer":null,"type":"classic"},
+{"id":"11","name":"mcl-mp4\/4","img":null,"year":"1988","team":"McLaren","power":"1350","weight":"540","price":"5000000","offer":null,"type":"classic"},
+{"id":"12","name":"f-2004","img":null,"year":"2004","team":"Ferrari","power":"900","weight":"605","price":"15000000","offer":null,"type":"classic"}
+]
+}
+,{"type":"table","name":"users","database":"formulamarket","data":
+[
+{"id":"18","name":"hectorrdez","pass":"09379231c307c1bff583b184a157ae61d7f00bac","email":"hectorrdez@gmail.com","telf":"2147483647","address":"Virgen de las virtudes nº 30 Bajo","cp":"3009","provincia":"Alicante","role":"user"}
+]
+}
+]
