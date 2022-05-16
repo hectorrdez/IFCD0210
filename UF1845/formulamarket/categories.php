@@ -9,7 +9,7 @@ include_once('./resources/includes/head.php');
 ?>
 
 <body>
-    <?php include_once('./resources/includes/nav.php') ?>
+    <?php $style = 'fixed-top'; include_once('./resources/includes/nav.php') ?>
     <main class="alone">
         <?php if (!isset($_GET['type'])) { ?>
             <h2 class="categoryTitle">SELECCIONA LA CATEGORIA</h2>

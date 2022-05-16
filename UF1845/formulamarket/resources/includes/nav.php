@@ -1,4 +1,4 @@
-<nav>
+<nav <?php if(isset($style)) echo('class="'.$style.'"') ?>>
     <button><a href="<?php
         if(!isset($basePath)) echo "./"; else echo ($basePath); ?>" target="_self">Inicio</a></button>
     <button><a href="<?php

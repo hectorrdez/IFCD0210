@@ -12,7 +12,7 @@ body
     margin: 0
     font-family: helvetica, consolas, Arial
     position: relative
-    background-color: $color4
+    background-color: white
 header
     position: relative
     background-color: white
@@ -28,6 +28,7 @@ nav
     height: fit-content
     display: flex
     justify-content: space-between
+    z-index: 2
     button
         width: 100%
         padding: 10px 0
@@ -133,6 +134,7 @@ footer
             grid-column: 3
 
 body.login
+    background-color: $color4
     main
         position: relative
         width: 100%
@@ -212,7 +214,8 @@ h2.categoryTitle
                 animation: zooImg 1s reverse backwards ease-in-out
             
 main.alone
-    padding: 2em
+    padding: 5em
+    margin-top: 5em
     width: 100%
 
 .center-H
@@ -409,7 +412,7 @@ span.red
     margin: .2em 0
     height: fit-content
 .change-list
-    list-style:url('/resources/imgs/icon-list.png')
+    list-style: url('/resources/imgs/icon-list.png')
 @media screen and (min-width: 960px)
     .product-1
         grid-row: 1
@@ -580,4 +583,6 @@ main.product
         .details-product
             grid-column: 1
             grid-row: 2
-    
+.fixed-top
+    position: fixed
+    top: 0px

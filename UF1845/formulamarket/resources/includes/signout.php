@@ -1,6 +1,7 @@
 <form method="post" action="">
     Has iniciado sesion como <?= $_SESSION['name'] ?>. <br>
     ¿Estas seguro de querer cerrar la sesión? <br>
+    <!-- Eres del role: <?= $_SESSION['role'] ?><br> -->
     <input type="submit" name="opt" value="Si"> 
     <input type="submit" name="opt" value="No">
     <div class="redirect">

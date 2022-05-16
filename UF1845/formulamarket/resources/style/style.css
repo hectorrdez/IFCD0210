@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: helvetica, consolas, Arial;
   position: relative;
-  background-color: #1D2F40;
+  background-color: white;
 }
 
 header {
@@ -30,6 +30,7 @@ nav {
   height: fit-content;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 nav button {
   width: 100%;
@@ -160,6 +161,9 @@ footer .content .element {
     grid-column: 3;
   }
 }
+body.login {
+  background-color: #1D2F40;
+}
 body.login main {
   position: relative;
   width: 100%;
@@ -259,7 +263,8 @@ h2.categoryTitle {
 }
 
 main.alone {
-  padding: 2em;
+  padding: 5em;
+  margin-top: 5em;
   width: 100%;
 }
 
@@ -510,8 +515,9 @@ span.red {
   margin: 0.2em 0;
   height: fit-content;
 }
-.change-list{
-  list-style:url('/resources/imgs/icon-list.png')
+
+.change-list {
+  list-style: url("/resources/imgs/icon-list.png");
 }
 
 @media screen and (min-width: 960px) {
@@ -742,6 +748,11 @@ main.product {
     grid-column: 1;
     grid-row: 2;
   }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
