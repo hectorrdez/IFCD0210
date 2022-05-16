@@ -23,7 +23,7 @@ include_once('./resources/includes/head.php');
             } else {
                 echo '<table border="1">';
                 $user = mysqli_fetch_all($users);
-                var_dump($user);
+                
                 echo '</table>';
             }
             ?>
@@ -37,9 +37,8 @@ include_once('./resources/includes/head.php');
             } else {
                 echo '<table border="1">';
                 $product = mysqli_fetch_assoc($products);
-                for($i = 0; $i< sizeof(array_keys($product)); $i++){
-                    var_dump($product);
-                }
+                $length = array_keys($product);
+                for($i = 0; $i < $length; )
                 echo '</table>';
             }
             ?>

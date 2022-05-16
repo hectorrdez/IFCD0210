@@ -14,5 +14,9 @@
                                                                 } else {
                                                                     echo "Hola, Identificate";
                                                                 }
-                                                                ?></a></button>
+                                                                ?></a>
+                                                                <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'Admin'){?><a href="<?php
+        if(!isset($basePath)) echo "./control-panel"; else echo ($basePath."control-panel"); ?>"><img src="<?php
+        if(!isset($basePath)) echo "./resources/imgs/settings-icon.png"; else echo ($basePath."resources/imgs/settings-icon.png"); ?>" alt=""></a><?php }?>
+</button>
 </nav>

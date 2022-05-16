@@ -84,6 +84,10 @@ nav .login a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+nav .login a img {
+  height: 1.5em;
+  filter: brightness(0) invert(1);
+}
 
 main {
   background-color: white;
@@ -630,8 +634,8 @@ main.product {
 }
 .details .img-product {
   border: 1px solid black;
-  width: 40em;
-  height: 40em;
+  width: 20em;
+  height: 20em;
   border-radius: 20px;
 }
 .details .img-product:hover {

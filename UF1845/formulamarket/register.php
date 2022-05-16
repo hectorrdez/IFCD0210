@@ -5,44 +5,46 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
     if (
-        isset($_POST['username']) && 
-        isset($_POST['password']) && 
-        isset($_POST['email']) && 
-        isset($_POST['telf']) && 
-        isset($_POST['rpassword']) && 
-        isset($_POST['cp']) && 
-        isset($_POST['address']) && 
-        isset($_POST['provincia'])) {
+        isset($_POST['username']) &&
+        isset($_POST['password']) &&
+        isset($_POST['email']) &&
+        isset($_POST['telf']) &&
+        isset($_POST['rpassword']) &&
+        isset($_POST['cp']) &&
+        isset($_POST['address']) &&
+        isset($_POST['provincia'])
+    ) {
         if (
-            !empty(trim($_POST['username'])) && 
-            !empty(trim($_POST['password'])) && 
-            !empty(trim($_POST['rpassword'])) && 
-            !empty(trim($_POST['telf'])) && 
-            !empty(trim($_POST['email'])) && 
-            !empty(trim($_POST['address'])) && 
-            !empty(trim($_POST['cp'])) && 
-            !empty(trim($_POST['provincia']))) {
+            !empty(trim($_POST['username'])) &&
+            !empty(trim($_POST['password'])) &&
+            !empty(trim($_POST['rpassword'])) &&
+            !empty(trim($_POST['telf'])) &&
+            !empty(trim($_POST['email'])) &&
+            !empty(trim($_POST['address'])) &&
+            !empty(trim($_POST['cp'])) &&
+            !empty(trim($_POST['provincia']))
+        ) {
 
             if (sha1($_POST['password']) == sha1($_POST['rpassword'])) {
                 include_once('./resources/functions/connection.php');
                 $select = 'SELECT name, email from users where name = "' . $_POST['username'] . '" OR email = "' . $_POST['email'] . '"';
                 $resultado = mysqli_query($connection, $select);
                 if (mysqli_affected_rows($connection) == 0) {
-                    $insert = 'INSERT INTO users(name,pass,email,telf,address,cp,provincia) values ("' 
-                    . $_POST['username'] . '","' 
-                    . sha1($_POST['password']) . '","' 
-                    . $_POST['email']. '","' 
-                    . $_POST['telf'] . '","'
-                    . $_POST['address'] . '","' 
-                    . $_POST['cp'] .'","'
-                    . $_POST['provincia']. '")';
+                    $insert = 'INSERT INTO users(name,pass,email,telf,address,cp,provincia) values ("'
+                        . $_POST['username'] . '","'
+                        . sha1($_POST['password']) . '","'
+                        . $_POST['email'] . '","'
+                        . $_POST['telf'] . '","'
+                        . $_POST['address'] . '","'
+                        . $_POST['cp'] . '","'
+                        . $_POST['provincia'] . '")';
                     $connection->query($insert);
                     //insert into log(name, pass,type) VALUES('hola','asdfasd','adios');
-                    $connection->query('insert into `log`(`name`,`pass`,`type`) values("'.$_POST['username'].'","'.sha1($_POST['password']).'", "register")');
+                    $connection->query('insert into `log`(`name`,`pass`,`type`) values("' . $_POST['username'] . '","' . sha1($_POST['password']) . '", "register")');
                     $_SESSION['name'] = $_POST['username'];
                     sleep(2);
                     header('Location: index.php');
-                }else{
+                } else {
                     $error = 'Algo ha fallado';
                 }
             } else {
