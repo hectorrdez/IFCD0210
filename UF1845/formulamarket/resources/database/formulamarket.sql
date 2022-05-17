@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2022 a las 20:42:20
+-- Tiempo de generación: 17-05-2022 a las 20:30:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -55,7 +55,15 @@ INSERT INTO `log` (`time`, `name`, `pass`, `type`) VALUES
 ('2022-05-13 19:53:41', 'hectorrdez', NULL, 'logout'),
 ('2022-05-13 19:55:44', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
 ('2022-05-13 20:16:29', 'hectorrdez', NULL, 'logout'),
-('2022-05-13 20:16:55', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success');
+('2022-05-13 20:16:55', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-16 17:54:41', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-16 18:06:59', 'hectorrdez', NULL, 'logout'),
+('2022-05-16 18:09:20', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-16 18:17:14', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-17 16:12:26', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-17 18:54:05', 'hectorrdez', NULL, 'logout'),
+('2022-05-17 18:55:14', 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'login-success'),
+('2022-05-17 19:01:59', 'hectorrdez', NULL, 'logout');
 
 -- --------------------------------------------------------
 
@@ -97,6 +105,25 @@ INSERT INTO `product` (`id`, `name`, `img`, `year`, `team`, `power`, `weight`, `
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `token`
+--
+
+CREATE TABLE `token` (
+  `time` varchar(20) NOT NULL DEFAULT current_timestamp(),
+  `user_id` varchar(20) NOT NULL,
+  `token` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `token`
+--
+
+INSERT INTO `token` (`time`, `user_id`, `token`) VALUES
+('2022-05-17 20:15:41', '', '16b46c81a1067419bd76a7cf0facdfd9');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -117,8 +144,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `pass`, `email`, `telf`, `address`, `cp`, `provincia`, `role`) VALUES
-(1, 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'hectorrdez@gmail.com', 2147483647, 'Virgen de las virtudes nº 30 Bajo', 3009, 'Alicante', 'user'),
-(2, 'fasdfasd', '3da541559918a808c2402bba5012f6c60b27661c', 'hectorrdez@hotmail.com', 2147483647, 'Virgen de las virtudes nº 30 Bajo', 3009, 'Alicante', 'user');
+(1, 'hectorrdez', '09379231c307c1bff583b184a157ae61d7f00bac', 'hectorrdez@gmail.com', 2147483647, 'Virgen de las virtudes nº 30 Bajo', 3009, 'Alicante', 'Admin');
 
 --
 -- Índices para tablas volcadas
@@ -129,6 +155,12 @@ INSERT INTO `users` (`id`, `name`, `pass`, `email`, `telf`, `address`, `cp`, `pr
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `token`
+--
+ALTER TABLE `token`
+  ADD PRIMARY KEY (`token`);
 
 --
 -- Indices de la tabla `users`
@@ -150,7 +182,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

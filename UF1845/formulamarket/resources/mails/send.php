@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
-require './vendor/autoload.php';
+require './resources/mails/vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -24,7 +24,7 @@ try {
         )
     );
    // $mail->SMTPDebug = 2; 
-    $file = file_get_contents('./user_email.json');
+    $file = file_get_contents('./resources/mails/user_email.json');
     $array = json_decode($file,true);
     echo($array['email']."<br>".$array['password']. "<br>");
     $mail->Host       = "smtp.gmail.com";     //Set the SMTP server to send through
@@ -36,7 +36,7 @@ try {
 
     //Recipients
     $mail->setFrom($array['email']);
-    $mail->addAddress('hectorrdez@gmail.com');     //Add a recipient
+    $mail->addAddress($address);     //Add a recipient
     //$mail->SMTPKeepAlive = true;
     // $mail->Mailer = "smtp"; 
     
@@ -51,8 +51,13 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Solicitud de cambio de contraseña en tu cuenta de Formula market';
+    $mail->Body    = '
+    Has pedido una nueva contraseña para tu cuenta en <b> Formula Market </b>. <br>
+    Por favor, haz click en el siguiente boton para acceder a la pagina web.<br>
+    <button style="background-color:#3384C8;height:5em;width:5em;color:white"><a style="text-decoration:none; color:white; font-size: 1.2em" href="http://www.formulamarket.com/token?token='.$token.'">Haz click aqui</a></button> <br>
+    El link será valido durante los próximos 5 mins de haber solicitado el cambio de contraseña.
+    ';;
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     if (!$mail->send()) {

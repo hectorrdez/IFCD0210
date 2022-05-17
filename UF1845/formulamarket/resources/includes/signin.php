@@ -48,7 +48,8 @@
         <input type="submit" value="Iniciar Sesion">
     </div>
     <input type="hidden" name="send" value="true">
-    <a href="./register">No tienes cuenta? Registrate.</a>
+    <a href="./register">No tienes cuenta? Registrate.</a><br>
+    <a href="./change-pass">¿Olvidaste la contraseña? Cambiala.</a>
     <div class="redirect">
     </div>
 </form>
