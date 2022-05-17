@@ -1,41 +1,40 @@
-<?php session_start() ?>
-<?php
-    if(!isset($_SESSION['name'])){
-        $_SESSION['last'] = 'promos';
-        header('Location: login');
-    }
+<?php 
+    session_start();
+    if(!isset($_SESSION['name'])) header('Location: ./login');
+    $title = 'Promociones | Formula Market';
+    include_once('./resources/includes/head.php');
 ?>
-<?php $title = "Promociones" ?>
-<?php include_once('./resources/includes/head.php') ?>
 <body>
     <?php include_once('./resources/includes/nav.php') ?>
-    <main class="alone">
-        <div class="wrapper-6">
-            <div class="product product-1">
-                <div class="img-product"><img src="./resources/imgs/formula-1/mercedes.jpg" alt="mercedes w13"></div>
-                <div class="name-product">W13</div>
-                <div class="descr-product"><ul>
-                    <li>Año: 2022</li>
-                    <li>Escuderia: Mercedes</li>
-                    <li>CV: 980cv/hp</li>
-                    <li>Peso: 797kg aprox.</li>
-                </ul></div>
-                <div class="last-price"><span class="last-price-product italic"> 140.000.000 $ </span><span class="offer">-20%</span></div>
-                <div class="price-product italic">112.000.000 $</div>
-            </div>
-            <div class="product product-2">
-                <div class="img-product"><img src="./resources/imgs/formula-classic/renault-r26.jpg" alt="renault r26"></div>
-                <div class="name-product">R-26</div>
-                <div class="descr-product"><ul>
-                    <li>Año: 2006</li>
-                    <li>Escuderia: Renault</li>
-                    <li>CV: 1000cv/hp</li>
-                    <li>Peso: 650kg aprox.</li>
-                </ul></div>
-                <div class="last-price"><span class="last-price-product italic">20.000.000 $</span><span class="offer">-100%</span></div>
-                <div class="price-product italic">0 $</div>
-            </div>
-        </div>
+    <main class="alone center">
+    <?php
+        include_once('./resources/functions/connection.php');
+        $select = 'select * from product where offer is not null';
+        $result = $connection->query($select);
+        if(mysqli_affected_rows($connection) != 0){
+            $i = 0;
+            echo ('<div class="center wrapper">');
+                while ($fila = $result->fetch_assoc()) {
+                    echo ('
+                <div class="product product-' . $i . '"><a href="./product/view?id=' . $fila['id'] . '">
+                    <div class="img-product"><img src="./resources/imgs/products/' . $fila['img'] . '.jpg"></div>
+                    <div class="name-product">' . $fila['name'] . '</div>
+                    <div class="descr-product"><ul class="change-list">
+                        <li>Año: ' . $fila['year'] . '</li>
+                        <li>Escuderia: ' . $fila['team'] . '</li>
+                        <li>CV: ' . $fila['power'] . 'cv/hp</li>
+                        <li>Peso: ' . $fila['weight'] . 'kg aprox.</li>
+                    </ul></div>
+                    <div class="last-price"><div class="last-price-product">'.$fila['price'].' $</div></div>'.'
+                    <div class="price-product">' . $fila['offer'] . ' $</div>
+                    </a></div>');
+                    $i++;
+                }
+                echo ("</div>");
+        }else{
+            echo 'Lo sentimos, ahora mismo no se encuentra ningun producto en Oferta. Vuelva mas tarde';
+        }
+    ?>
     </main>
     <?php include_once('./resources/includes/footer.php') ?>
 </body>

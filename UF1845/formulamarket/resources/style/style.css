@@ -292,60 +292,42 @@ main.alone {
   width: 40em;
   height: 35.5em;
   border-radius: 20px;
-  border: 1px solid black;
+  overflow: hidden;
+}
+.map iframe {
+  height: 35.5em;
+  width: 40em;
+  border: 2px solid rgba(242, 46, 82, 0.5);
+  border-radius: 20px;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
 
-.wrapper-2 {
-  width: 100%;
+.survey {
+  width: 40em;
+  height: 35.5em;
 }
-@media screen and (min-width: 1020px) {
-  .wrapper-2 {
-    display: flex;
-    justify-content: space-around;
-  }
-  .wrapper-2 .survey {
-    width: 40em;
-    height: 30em;
-  }
-  .wrapper-2 .survey form {
-    padding: 1em;
-    border-radius: 40px;
-    border: 2px solid rgba(242, 46, 82, 0.5);
-    margin-left: 1em;
-    font-style: italic;
-    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
-  }
-  .wrapper-2 iframe {
-    height: 35.5em;
-    width: 40em;
-    border: 2px solid rgba(242, 46, 82, 0.5);
-    border-radius: 20px;
-    box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
-  }
+.survey form {
+  padding: 1em;
+  border-radius: 40px;
+  border: 2px solid rgba(242, 46, 82, 0.5);
+  margin-left: 1em;
+  font-style: italic;
+  box-shadow: 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 1020px) {
-  .wrapper-2 form {
-    width: 100%;
-  }
-  .wrapper-2 .map {
-    height: 35.5em;
-    width: 100%;
-  }
-}
-.wrapper-2 form h2.form {
+.survey form h2.form {
   margin-bottom: 0;
 }
-.wrapper-2 form hr {
+.survey form hr {
   margin-bottom: 1em;
 }
-.wrapper-2 form input {
+.survey form input {
   margin-bottom: 1em;
   width: 100%;
   padding: 1em;
   border-radius: 40px;
   border: 1px solid grey;
 }
-.wrapper-2 form textarea {
+.survey form textarea {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -353,28 +335,63 @@ main.alone {
   width: 100%;
   font-size: 1.2em;
 }
-.wrapper-2 form label {
+.survey form label {
   position: relative !important;
   left: 0 !important;
   padding-bottom: 0.2em;
 }
-.wrapper-2 form .buttons {
+.survey form .buttons {
   margin-top: 1em;
   display: flex;
-  object-fit: cover !important;
+  overflow: hidden;
 }
-.wrapper-2 form input[type=submit], .wrapper-2 form [type=reset] {
+.survey form input[type=submit], .survey form [type=reset] {
   width: 50%;
   background-color: #F22E52;
   color: white;
   font-size: 1em;
+  overflow: hidden;
 }
-.wrapper-2 form input[type=submit]:hover, .wrapper-2 form [type=reset]:hover {
+.survey form input[type=submit]:hover, .survey form [type=reset]:hover {
   animation-name: changeColor;
   animation-duration: 0.5s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 2em;
+}
+@media screen and (min-width: 1020px) {
+  .grid-2 {
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+  }
+  .grid-2 .map {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-2 .survey {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .grid-2 {
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+  }
+  .grid-2 .map {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-2 .survey {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 span.red {
@@ -757,6 +774,24 @@ main.product {
 .fixed-top {
   position: fixed;
   top: 0px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-row: 1;
+  grid-template-columns: 3;
+}
+.grid-3 .column-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.grid-3 .column-2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.grid-3 .column-3 {
+  grid-row: 1;
+  grid-column: 3;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,12 @@
 <?php
 session_start();
-$title = 'Categorias';
+if(isset($_GET['type']) && $_GET['type'] == 'classic'){
+    $title = 'Classic | Formula Market';
+}else if(isset($_GET['type']) && $_GET['type'] == 'modern'){
+    $title = 'Modern | Formula Market';
+}else{
+    $title = 'Categorias | Formula Market';
+}
 $_SESSION['last'] = 'categories';
 if (!isset($_SESSION['name'])) {
     header('Location: login');

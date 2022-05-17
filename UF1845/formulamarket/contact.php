@@ -6,7 +6,7 @@
 <body>
     <?php include_once('./resources/includes/nav.php') ?>
     <main class="alone center">
-       <div class="contact">
+       <div class="contact grid-2">
            <div class="map">
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d276.49463952427516!2d-0.49860858202152547!3d38.36796293702272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6236f021ad6dd3%3A0xbd27999a62c7e4ec!2sC.%20Virgen%20de%20las%20Virtudes%2C%2030%2C%2003009%20Alicante%20(Alacant)%2C%20Alicante!5e0!3m2!1ses!2ses!4v1649963333854!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
            </div>

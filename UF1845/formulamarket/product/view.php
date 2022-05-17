@@ -42,6 +42,17 @@ include_once('../resources/includes/head.php');
 
             </div>
         </div>
+        <div class="suggestions center">
+            Algunos productos que te pueden gustar:
+            <div class="grid-3">
+                <?php
+                    include('../resources/functions/connection.php');
+                    $select = 'select img from product where type != "'.$resultado['type'].'" limit 3';
+                    $suggestions = $connection->query($select);
+                    
+                ?>
+            </div>
+        </div>
     </main>
     <?php include_once('../resources/includes/footer.php') ?>
 </body>
