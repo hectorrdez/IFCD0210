@@ -1,0 +1,10 @@
+<pedidos>
+    <pedido>
+        <id>1</id>
+        <nombre>Juan</nombre>
+        <apellidos>Delgado Martinez</apellidos>
+        <producto>Bicicleta A2023</producto>
+        <direccion>Calle Barco 4, tercer piso</direccion>
+        <fecha>19-5-2000</fecha>
+    </pedido>
+</pedidos>

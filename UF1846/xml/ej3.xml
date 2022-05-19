@@ -1,0 +1,32 @@
+<tabla>
+    <fila>
+        <nombre>Gofres Belgas</nombre>
+        <precio>5,95</precio>
+        <descripcion></descripcion>
+        <calorias></calorias>
+    </fila>
+    <fila>
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+        <calorias></calorias>
+    </fila>
+    <fila>
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+        <calorias></calorias>
+    </fila>
+    <fila>
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+        <calorias></calorias>
+    </fila>
+    <fila>
+        <nombre></nombre>
+        <precio></precio>
+        <descripcion></descripcion>
+        <calorias></calorias>
+    </fila>
+</tabla>
