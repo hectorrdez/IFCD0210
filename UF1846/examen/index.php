@@ -108,10 +108,10 @@
                                 foreach($element->temperatura as $element2){
                                     ?>
                                     <div class="max">
-                                        <?= '<li>Maxima: '.$element2->maxima.'</li>' ?>
+                                        <?= '<li>Maxima: '.$element2->maxima.' ºC</li>' ?>
                                     </div>
                                     <div class="min">
-                                        <?= '<li>Minima: '.$element2->minima.'</li>' ?>
+                                        <?= '<li>Minima: '.$element2->minima.' ºC</li>' ?>
                                     </div>
                                     <?php
                                 }
@@ -128,7 +128,7 @@
                                            ?>
                                        </div>
                                        <div class="velocidad">
-                                           <?= '<li>Velocidad: '.$element3->velocidad.'</li>' ?>
+                                           <?= '<li>Velocidad: '.$element3->velocidad.' km/h</li>' ?>
                                        </div>
                                        <?php
                                     }
