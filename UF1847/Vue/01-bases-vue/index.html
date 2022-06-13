@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases Vuejs</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div class="myApp">
+        {{msg}}
+        <div>{{escribe}}</div>
+        <button @click="cambia">Cambiar</button>
+        <button @click="increment">Pinchame: {{this.count}}</button>
+        <button @click="mayusculas">Tocame</button>
+        <button @click="escribirA">Tocame</button>
+        <button @click="borrar">borrar</button>
+
+        <form @submit.prevent="anadirColeccion">
+            <input type="text" v-model="newInput" name="anadir" id="anadir" @keypress="unaPulsacion">
+            <button>Añadir</button>
+        </form>
+        <p v-if="ensena()">Nuevo: {{this.newInput}}</p>
+        <ul>
+            <li v-for="(todo,index) in miColeccion">{{index+1}} <b>{{todo.tipo }}</b> : {{todo.titulo}} en el año <small> {{todo.ano}}</small> 
+            <button @click="borrarColeccion(todo)">x</button></li>
+        </ul>
+    </div>
+    <script src="code.js"></script>
+</body>
+
+</html>
